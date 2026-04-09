@@ -1,0 +1,30 @@
+Install Java 17 on codespace:
+    //install java
+    sudo apt update
+    sudo apt install -y openjdk-17-jdk
+
+    //ensure java 17 is selected
+    ls /usr/lib/jvm
+    sudo update-alternatives --config java
+    sudo update-alternatives --config javac
+
+    //force the change
+    export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+    export PATH="$JAVA_HOME/bin:$PATH"
+
+    //ensure it was changes (only really need java and javac --version)
+    hash -r
+    java -version
+    javac -version
+    which java
+    which javac
+    echo $JAVA_HOME
+
+
+
+now clone playground repo (Necessary to run the app):
+    git clone https://github.com/apache/gravitino-playground.git
+
+inside the cloned repo, run the app:
+    cd gravitino-playground
+    ./playground.sh start
