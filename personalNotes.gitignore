@@ -28,3 +28,22 @@ now clone playground repo (Necessary to run the app):
 inside the cloned repo, run the app:
     cd gravitino-playground
     ./playground.sh start
+
+
+Now Linux instructions for local repo:
+    Install Java + Ensure proper version
+    Clone second repo to use playground
+    Install Docker, ensure Docker compose is functioning too
+        docker --version
+        docker compose version
+
+        sudo systemctl enable docker
+        sudo systemctl start docker
+
+    run playground
+            ./playground.sh start 
+
+
+    Stop
+        ./playground.sh stop
+        sudo systemctl stop docker
